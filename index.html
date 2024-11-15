@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="countdown.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" href="images/favicon_io/favicon.ico"/>
+    <style>
+        html { scroll-behavior: smooth; }
+        section { padding: 40px 0; } /* Padding for visual separation */
+    </style>
    
 
     
@@ -52,16 +56,18 @@
                         <div class="navbar-nav ml-auto ">
                             <a href="index.html" class="p-3 text-decoration-none text-light bold active">Home</a>
                             <a href="Timeline.html" class="p-3 text-decoration-none text-light bold">Timeline</a>
-                            <a href="instructions.html" class="p-3 text-decoration-none text-light bold ">Rules</a>
-                            <a href="sponsorship.html" class="p-3 text-decoration-none text-light bold ">Sponser's</a>
+                            <a href="#overview" class="p-3 text-decoration-none text-light bold ">Overview</a>
+                            <a href="sponsorship.html" class="p-3 text-decoration-none text-light bold ">Sponser</a>
                             <a href="about.html" class="p-3 text-decoration-none text-light bold">About</a>
                             <a href="login.html" class="p-3 text-decoration-none text-light bold">Login</a>
-                            
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
+
+
+<!-- main section -->
 
         <div class="jumbotron bg-transparent mb-0 pt-3 radius-0 ">
             <div class="container ">
@@ -85,7 +91,54 @@
                 </div>
             </div>
         </div>
+
+        <div class="jumbotron bg-transparent mb-0 pt-3 radius-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12"><section id="overview">
+                        <h2 class="display-1 bold color_white content__title text-center"><span class="color_danger">OVER</span>VIEW<span class="vim-caret">&nbsp;</span></h2>
+                        <p class="text-grey text-spacey text-center hackerFont lead"></section>
+                            <script src="js/autoscrollstopper.js"></script>
+                            The <span class="text-white">CyberHive Club</span> is proud to host Crack-In 1.0, a national-level Capture the Flag (CTF) competition, as part of our ongoing mission to empower the next generation of cybersecurity enthusiasts. Organized under the banner of <span class="text-white">Gyan Ganga Institute of Technology & Science</span>, this event offers a thrilling platform for participants to showcase their skills, tackle challenging problems, and learn from peers in the cybersecurity community.
+
+                        </p>
+                        <div class="row justify-content-center hackerFont">
+                            <div class="col-md-8">
+
+                                <h3 class="bold color_white text-center pt-3">
+                                    Key Highlights of Crack-In 1.0
+                                </h3><br>
+                                • <span class="bold text-danger lead">Event Type:</span> <span class="text-decoration-underline">Jeopardy-style</span> CTF with a diverse range of categories, including Web Exploitation, Cryptography, Reverse Engineering, Digital Forensics, and Binary Exploitation.<br></br>
+                                • <span class="bold text-danger lead">Level:</span> Designed for all skill levels, from beginners to seasoned professionals.<br></br>
+                                • <span class="bold text-danger lead">Collaborative Learning:</span> Encourages teamwork, problem-solving, and the application of ethical hacking techniques.<br></br>
+                                • <span class="bold text-danger lead">Prizes and Recognition:</span> Participants compete for exciting rewards, certificates, and the chance to gain recognition among top cybersecurity talent.<br></br>
+                                <h4 class="bold color_white mt-4 pt-3 lead">
+                                    Objective
+                                </h4>
+                                <p class="text-grey text-spacey hackerFont ">
+                                Crack-In 1.0 is more than just a competition; it is an opportunity to build practical knowledge, network with like-minded individuals, and contribute to the growing cybersecurity ecosystem. The event aligns with our commitment to fostering innovation, resilience, and excellence in the field of information security.
+                                Join us in this exciting journey to crack codes, uncover vulnerabilities, and defend against threats in a fun and engaging environment.
+                                </p>
+
+                                <div class="row text-center pt-5">
+                                    <div class="col-xl-12">
+                                        <button class="btn btn-outline-danger btn-shadow px-3my-2 ml-0 ml-sm-1 text-left typewriter" onclick="(function(){window.location.href='register.html'})();">
+                                            <h4>Register Now</h4>
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     
+        
+
+        <!-- footer section -->
+
+
     <footer class="bg-transparent text-center text-white pt-4">
         <div class="container">
           <div class="row justify-content-center">
@@ -108,5 +161,4 @@
     <script src="js/preloader.js"></script>  
     <script src="js/countdown.js"></script>
 </body>
-
 </html>
