@@ -93,7 +93,7 @@
 .whitebox img{
     position: absolute;
     top: 1%;
-    right: -115px;
+    right: -124px;
     width: 70px;
     border-radius: 50%;
     border: 9px solid rgb(255, 255, 255);
@@ -144,7 +144,8 @@
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-left: 15px solid #fff;
-    right: -5px;
+    right: -4px;
+    size: 30px;
 
 }
 

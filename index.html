@@ -17,7 +17,24 @@
     <style>
         html { scroll-behavior: smooth; }
         section { padding: 40px 0; } /* Padding for visual separation */
+        
     </style>
+    <style>
+        @keyframes swivel {
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(20deg);
+      }
+      100% {
+        transform: rotateY(0deg);
+      }
+    }
+    .card:hover {
+      animation: swivel 0.8s ease-in-out;
+    }
+      </style>
    
 
     
@@ -66,11 +83,11 @@
             </div>
         </div>
 
-
 <!-- main section -->
 
         <div class="jumbotron bg-transparent mb-0 pt-3 radius-0 ">
-            <div class="container ">
+            <div class="container">
+
                 <div class="row">
                     <div class="col-xl-8">
                         <h1 class="display-1 bold color_white content__title text">CRACK-IN CTF <span class="vim-caret">&nbsp;</span></h1>
@@ -82,25 +99,29 @@
                 </div>
                 <div class="row">
                     <div class="col-xl-4">
-                        <p class="mt-5 text-grey text-spacey hackerFont lead "> 
+                        <p class="mt-3 text-grey text-spacey hackerFont lead "> 
                             In silence, the world reveals its hidden truths. </p>
-                        <button class="btn btn-outline-danger btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left typewriter" onclick="(function(){window.location.href='register.html'})();">
+                        <button class="btn btn-outline-danger btn-shadow px-3 mt-4 ml-0 ml-sm-1 text-left typewriter" onclick="(function(){window.location.href='register.html'})();">
                             <h4>Register</h4>
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="jumbotron bg-transparent mb-0 pt-3 radius-0">
-            <div class="container">
+
+                <br>
+                </br>
+
+
                 <div class="row">
-                    <div class="col-xl-12"><section id="overview">
-                        <h2 class="display-1 bold color_white content__title text-center"><span class="color_danger">OVER</span>VIEW<span class="vim-caret">&nbsp;</span></h2>
-                        <p class="text-grey text-spacey text-center hackerFont lead"></section>
+                    <div class="col-xl-12">
+                        <section id="overview">
+                            <h2 class="display-1 bold color_white content__title text-center">
+                                <span class="color_danger">OVER</span>VIEW<span class="vim-caret">&nbsp;</span></h2>
+                        </section>
+                        <p class="text-grey text-spacey text-center hackerFont ">
                             <script src="js/autoscrollstopper.js"></script>
-                            The <span class="text-white">CyberHive Club</span> is proud to host Crack-In 1.0, a national-level Capture the Flag (CTF) competition, as part of our ongoing mission to empower the next generation of cybersecurity enthusiasts. Organized under the banner of <span class="text-white">Gyan Ganga Institute of Technology & Science</span>, this event offers a thrilling platform for participants to showcase their skills, tackle challenging problems, and learn from peers in the cybersecurity community.
-
+                            The <span class="text-white">CyberHive Club</span> is proud to host Crack-In 1.0, a national-level Capture the Flag (CTF) competition, as part of our ongoing mission to empower the next generation of cybersecurity enthusiasts. Organized under the banner of 
+                            <span class="text-white">Gyan Ganga Institute of Technology & Science</span>, this event offers a thrilling platform for participants to showcase their skills, tackle challenging problems, and learn from peers in the cybersecurity community.
                         </p>
                         <div class="row justify-content-center hackerFont">
                             <div class="col-md-8">
@@ -112,30 +133,87 @@
                                 • <span class="bold text-danger lead">Level:</span> Designed for all skill levels, from beginners to seasoned professionals.<br></br>
                                 • <span class="bold text-danger lead">Collaborative Learning:</span> Encourages teamwork, problem-solving, and the application of ethical hacking techniques.<br></br>
                                 • <span class="bold text-danger lead">Prizes and Recognition:</span> Participants compete for exciting rewards, certificates, and the chance to gain recognition among top cybersecurity talent.<br></br>
-                                <h4 class="bold color_white mt-4 pt-3 lead">
-                                    Objective
-                                </h4>
-                                <p class="text-grey text-spacey hackerFont ">
-                                Crack-In 1.0 is more than just a competition; it is an opportunity to build practical knowledge, network with like-minded individuals, and contribute to the growing cybersecurity ecosystem. The event aligns with our commitment to fostering innovation, resilience, and excellence in the field of information security.
-                                Join us in this exciting journey to crack codes, uncover vulnerabilities, and defend against threats in a fun and engaging environment.
-                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="row text-center pt-5">
-                                    <div class="col-xl-12">
-                                        <button class="btn btn-outline-danger btn-shadow px-3my-2 ml-0 ml-sm-1 text-left typewriter" onclick="(function(){window.location.href='register.html'})();">
-                                            <h4>Register Now</h4>
-                                            </button>
-                                    </div>
+
+
+                <br>
+
+
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <section id="prizepool">
+                            <h2 class="display-1 bold color_white content__title text-center">
+                                <span class="color_danger">PRIZE-</span>POOL<span class="vim-caret">&nbsp;</span>
+                            </h2>
+                        </section>
+                        <p class="text-grey text-spacey text-center hackerFont">
+                            <script src="js/autoscrollstopper.js">
+                            </script>The <span class="text-white">Crack-In 1.0 CTF</span> competition brings an exhilarating opportunity for cybersecurity enthusiasts to showcase their skills and compete for an impressive prize pool! Whether you’re a seasoned pro or a rising star in the field, this event offers rewards that match the intensity and excitement of the challenges.
+                            Prove your expertise, outsmart the competition, and secure your place as a champion in Crack-In CTF. Along with the prizes, winners will gain recognition and bragging rights in the cybersecurity community.<br></br>
+                            ☠️<span class="text-danger">Are you ready to crack the code and seize the prize?</span>☠️
+                        </p>
+                        <section class="container my-1">
+                            <h2 class="text-center mb-4">💀🏆WINNING BOUNTY🏆💀</h2>
+                            <div class="row g-4">
+                              <!-- 1st Prize -->
+                              <div class="col-md-4">
+                                <div class="card shadow-lg border-danger p-3">
+                                  <div class="card-body text-center">
+                                    <h3 class="card-title text-primary">🥇 1st Prize 🥇</h3>
+                                    <p class="display-6"><strong>1 LAKH</strong></p>
+                                    <p class="card-text">Exclusive goodies included!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 2nd Prize -->
+                              <div class="col-md-4">
+                                <div class="card shadow-lg border-success p-3">
+                                  <div class="card-body text-center">
+                                    <h3 class="card-title text-success">🥈 2nd Prize 🥈</h3>
+                                    <p class="display-6"><strong>50K</strong></p>
+                                    <p class="card-text">Exciting goodies included!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 3rd Prize -->
+                              <div class="col-md-4">
+                                <div class="card shadow-lg border-info p-3">
+                                  <div class="card-body text-center">
+                                    <h3 class="card-title text-warning">🥉 3rd Prize 🥉</h3>
+                                    <p class="display-6"><strong>10K</strong></p>
+                                    <p class="card-text">Cool goodies included!</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                            <p class="text-grey text-center text-spacey hackerFont">
+                                The <span class="text-danger">Top 10</span> performers will be rewarded with exclusive goodies, celebrating their outstanding skills and efforts.</p>
+                            <p class="text-grey text-center text-spacey hackerFont">
+                                <span class="text-danger">*</span>Every participant will receive a certificate of achievement, commemorating their involvement and dedication in Crack-In CTF.
+
+
+                            <div class="row justify-content-center hackerFont">
+                                <div class="col-md-8">
+                                    <h4 class="bold color_white mt-4 pt-3 lead">
+                                        Objective
+                                    </h4>
+                                    <p class="text-grey text-spacey hackerFont ">
+                                    Crack-In 1.0 is more than just a competition; it is an opportunity to build practical knowledge, network with like-minded individuals, and contribute to the growing cybersecurity ecosystem. The event aligns with our commitment to fostering innovation, resilience, and excellence in the field of information security.
+                                    Join us in this exciting journey to crack codes, uncover vulnerabilities, and defend against threats in a fun and engaging environment.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    
         
-
         <!-- footer section -->
 
 
@@ -160,5 +238,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/preloader.js"></script>  
     <script src="js/countdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
