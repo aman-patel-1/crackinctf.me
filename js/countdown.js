@@ -1,6 +1,6 @@
 // Countdown Timer
 const countdown = () => {
-    const countDate = new Date("2024-12-01T00:00:00").getTime(); // Set to event start date
+    const countDate = new Date("2024-12-15T10:00:00").getTime(); // Set to event start date
     const now = new Date().getTime();
     const gap = countDate - now;
 
