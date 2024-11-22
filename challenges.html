@@ -19,6 +19,28 @@
     <link rel="stylesheet" href="css/main.css">
     
     <link rel="icon" type="image/png" href="images/favicon_io/favicon 2.ico" />
+    <style>
+        /* Flashing animation for the countdown timer */
+@keyframes flash {
+    0% {
+        color: red;
+        opacity: 1;
+    }
+    50% {
+        color: yellow;
+        opacity: 0.5;
+    }
+    100% {
+        color: red;
+        opacity: 1;
+    }
+}
+
+#countdown-timer {
+    animation: flash 1s infinite; /* Apply flashing effect every second */
+}
+
+    </style>
     
    
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
@@ -51,7 +73,7 @@
                     </div>
                     
                     <div class="navbar-nav ml-auto ">
-                        <a href="index.html" class="p-3 text-decoration-none text-light bold active">Home</a>
+                        <a href="index.html" class="p-3 text-decoration-none text-light bold">Home</a>
                         <a href="instructions.html" class="p-3 text-decoration-none text-light bold">Rules</a>
                         <a href="Timeline.html" class="p-3 text-decoration-none text-light bold">Timeline</a>
                         <a href="#prizepool" class="p-3 text-decoration-none text-light bold">Prize</a>
@@ -72,9 +94,13 @@
                     <p class="text-grey text-spacey hackerFont ">
                         Before you begin have a look at <a href="instructions.html" class="text-danger">Rules & Instructions</a>
                     </p>
-                    <p class="text-grey text-white hackerFont lead mb-5">
+                    <p class="text-grey text-white hackerFont lead ">
                         Its time to show the world what you can do!
                     </p>
+                    <div id="countdown-timer" class=" text-info hackerFont lead mb-4">
+                        Time Left: <span id="time-left" class="bold text-danger"></span>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -87,7 +113,7 @@
                     <div class="card category_web">
 
                         <div class="card-header solved" data-target="#problem_id_1" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_1">
-                            Challenge 1 Bombs Landed <span class="badge">solved</span> <span class="badge">80 points</span>
+                            Blueprints of the Future Drone <span class="badge">solved</span> <span class="badge">100 points</span>
                         </div>
 
                         <div id="problem_id_1" class="collapse card-body">
@@ -97,10 +123,16 @@
                                     
                                     <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_1_chart"></canvas></div>
                                 </div>
-                                <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}Can you find the password? Enter the password as flag in the following form: lakshyCan you find the password? Enter the password as flag in the following form: lakshyCan you find the password? Enter the password as flag in the following form: lakshyCan you find the password? Enter the password as flag in the following form: lakshy
+                                <p>The SkyTech Innovations was on the verge of unveiling its cutting-edge drone for agricultural surveillance. 
+                                    However, a group of cybercriminals, led by the notorious Phantom, stole the blueprints. 
+                                    The last known location of the thief was Connaught Place, New Delhi, where they were seen using a public Wi-Fi network. 
+                                    You’ve intercepted a suspicious executable, <span class="bold text-info">droneControl.exe</span>, from Phantom’s laptop. 
+                                    Reverse-engineer the program to find the password that unlocks the blueprint file.
                                 </p>
-                                <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
-                                <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
+                                <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow">
+                                    <span class="fa fa-download mr-2"></span>Download</a>
+                                <a href="#hint1" data-toggle="modal" data-target="#hint1" class="btn btn-outline-secondary btn-shadow">
+                                    <span class="far fa-lightbulb mr-2"></span>Hint</a>
                                 <div class="input-group mt-3">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="customRadio1_p1" name="customRadio_p1" class="custom-control-input">
@@ -138,7 +170,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="card category_reversing">
                         <div class="card-header" data-target="#problem_id_2" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_2">
-                            Challenge 2 Easy Pass <span class="badge align-self-end">80 points</span>
+                            The Phantom's Network <span class="badge align-self-end">100 points</span>
                         </div>
                         <div id="problem_id_2" class="collapse card-body">
                             <blockquote class="card-blockquote">
@@ -146,7 +178,9 @@
                                     <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                     <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_2_chart"></canvas></div>
                                 </div>
-                                <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                                <p>Inspector Arvind Reddy, a cybercrime officer with the Indian Cyber Crime Coordination Centre (I4C), was investigating the notorious hacker Deadly virus who recently targeted the government’s agricultural database.
+                                    Arvind intercepted a network packet dump, <span class="bold text-info">wifi_traffic.pcap</span>, where Phantom had logged into an unencrypted website over a public Wi-Fi network at Gateway of India, Mumbai. 
+                                    Your task is to extract the login credentials Phantom used to access the site.
                                 </p>
                                 <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                                 <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -186,7 +220,8 @@
                 <div class="col-md-4 mb-3">
                     <div class="card category_pwning">
                         <div class="card-header" data-target="#problem_id_3" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_3">
-                           Challenge 3 Impossible Password <span class="badge align-self-end">80 points</span>
+                            The Missing Broadcast
+                            <span class="badge align-self-end">80 points</span>
                         </div>
                         <div id="problem_id_3" class="collapse card-body">
                             <blockquote class="card-blockquote">
@@ -194,7 +229,11 @@
                                     <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                     <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_3_chart"></canvas></div>
                                 </div>
-                                <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                                <p>Nina Malhotra, a famous radio host in New Delhi, vanished mysteriously after broadcasting a cryptic message:<br>
+                                    "The truth is in the static." 
+                                    Authorities recovered a recorded file,<span class="bold text-info">last_broadcast.wav</span>, and an IP range from her radio station’s network,<span class="">IP-TBA</span> .
+                                    It's suspected that her disappearance is linked to a cyberattack.
+                                    Your task is to analyze the audio file and Nmap scan the network to locate clues and uncover the truth behind Nina's disappearance.
                                 </p>
                                 <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                                 <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -235,7 +274,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="card category_misc">
                         <div class="card-header" data-target="#problem_id_4" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_4">
-                           Challenge 4 Find The Secret Flag <span class="badge align-self-end">80 points</span>
+                            Alia’s Hidden URL<span class="badge align-self-end">80 points</span>
                         </div>
                         <div id="problem_id_4" class="collapse card-body">
                             <blockquote class="card-blockquote">
@@ -243,7 +282,9 @@
                                     <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                     <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_4_chart"></canvas></div>
                                 </div>
-                                <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                                <p> Alia Singh, a junior developer at AlpaTech, a leading cybersecurity firm in Pune, noticed encrypted messages being exchanged through a hidden URL on her company’s website.
+                                     She suspects a rogue insider is leaking proprietary data. 
+                                     You must uncover the hidden URL by analyzing the website’s source code, then decrypt the messages to expose the rogue insider before they leak more sensitive information.
                                 </p>
                                 <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                                 <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -283,7 +324,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="card category_steg">
                         <div class="card-header" data-target="#problem_id_5" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_5">
-                           Challenge 5 DSYM <span class="badge align-self-end">80 points</span>
+                            Hijacked Drone <span class="badge align-self-end">80 points</span>
                         </div>
                         <div id="problem_id_5" class="collapse card-body">
                             <blockquote class="card-blockquote">
@@ -291,7 +332,9 @@
                                     <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                     <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_5_chart"></canvas></div>
                                 </div>
-                                <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                                <p>In Hyderabad, the country’s drone industry leader, Captain Mira Sharma reported her drone being hijacked mid-flight during a critical mission. 
+                                The engineers at IndoDrone Systems found a tampered firmware binary called <span class="bold text-info">drone_fw.bin </span>Your task is to reverse-engineer the firmware and find the code that was used to hijack the drone.
+                                Help Mira secure drones in the future.
                                 </p>
                                 <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                                 <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -332,7 +375,7 @@
                 <div class="col-md-12 mb-3">
                     <div class="card category_crypt">
                         <div class="card-header" data-target="#problem_id_6" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_6">
-                             Challenge 6 Headache <span class="badge align-self-end">80 points</span>
+                            The Buried Truth<span class="badge align-self-end">80 points</span>
                         </div>
                         <div id="problem_id_6" class="collapse card-body">
                             <blockquote class="card-blockquote">
@@ -340,7 +383,10 @@
                                     <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                     <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_6_chart"></canvas></div>
                                 </div>
-                                <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                                <p> 
+                                    In Mumbai, investigative journalist Mukund Deshpandey stumbled upon a huge corporate scandal involving Bharat Corp, one of India’s largest conglomerates.
+                                     The evidence was hidden in a social media post containing an image called <span class="bold text-info">buried_truth.png</span> 
+                                     Your task is to extract the hidden evidence using steganographic tools and then decrypt the text using the provided passphrase CRACK to expose the corporate corruption.                       
                                 </p>
                                 <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                                 <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -381,7 +427,7 @@
                 <div class="card category_web">
 
                     <div class="card-header solved" data-target="#problem_id_7" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_7">
-                        Challenge 7 Bombs Landed <span class="badge">solved</span> <span class="badge">80 points</span>
+                        Shadows in the Signal <span class="badge">solved</span> <span class="badge">80 points</span>
                     </div>
 
                     <div id="problem_id_7" class="collapse card-body">
@@ -391,7 +437,9 @@
                                 
                                 <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_7_chart"></canvas></div>
                             </div>
-                            <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                            <p>A rogue IoT device in a smart city project is broadcasting malicious signals, threatening the integrity of the entire city’s infrastructure in Bengaluru.
+                                Riya Patel, an engineer working with SmartTech Solutions, narrowed the device down to subnet <span class="bold text-info">IP-TBA</span>, but its exact IP and port are unknown.
+                                 
                             </p>
                             <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                             <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -432,7 +480,7 @@
             <div class="col-md-4 mb-3">
                 <div class="card category_reversing">
                     <div class="card-header" data-target="#problem_id_8" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_8">
-                      Challenge 8 Find The Easy <span class="badge align-self-end">80 points</span>
+                        The Cursed Artifact<span class="badge align-self-end">80 points</span>
                     </div>
                     <div id="problem_id_8" class="collapse card-body">
                         <blockquote class="card-blockquote">
@@ -440,7 +488,10 @@
                                 <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                 <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_8_chart"></canvas></div>
                             </div>
-                            <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                            <p>In Varanasi, Dr. Nitin Awasthi, an archaeologist, discovered an ancient artifact rumored to unlock the secrets of an ancient Indian tomb. 
+                            The artifact, a peculiar image called <span class="bold text-info">artifact.png</span> is believed to contain the key to entering the tomb. 
+                            Your task is to use steganography to extract a Base64 string from the image and then decrypt it using AES-256 with an IV hidden in the image’s metadata.
+                            Combine the decrypted data to form the tomb’s passphrase and unlock the artifact's secret.
                             </p>
                             <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                             <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -480,7 +531,7 @@
             <div class="col-md-4 mb-3">
                 <div class="card category_pwning">
                     <div class="card-header" data-target="#problem_id_9" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_9">
-                        Challenge 9 Impossible Password <span class="badge align-self-end">80 points</span>
+                        The BlackBox Virus<span class="badge align-self-end">80 points</span>
                     </div>
                     <div id="problem_id_9" class="collapse card-body">
                         <blockquote class="card-blockquote">
@@ -488,7 +539,11 @@
                                 <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                 <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_9_chart"></canvas></div>
                             </div>
-                            <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                            <p> A deadly virus, called BlackBox, designed to target India’s critical industrial control systems, was intercepted in a compromised file named <span class="bold text-info">blackbox.exe</span>
+                                The virus self-destructs when debugged, making it difficult to analyze. 
+                                Forensic analyst Priya Mehta from CSIR-CRS needs your help to reverse-engineer the virus without triggering its self-destruct mechanism. 
+                                You must extract the embedded payload and neutralize its kill-switch.
+
                             </p>
                             <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                             <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -531,7 +586,7 @@
             <div class="col-md-12 mb-3">
                 <div class="card category_crypt">
                     <div class="card-header" data-target="#problem_id_10" data-toggle="collapse" aria-expanded="false" aria-controls="problem_id_10">
-                       Challenge 10 Headache <span class="badge align-self-end">80 points</span>
+                        The Missing Witness <span class="badge align-self-end">80 points</span>
                     </div>
                     <div id="problem_id_10" class="collapse card-body">
                         <blockquote class="card-blockquote">
@@ -539,7 +594,10 @@
                                 <h6 class="solvers">Solvers: <span class="solver_num">76</span> &nbsp;<span class="color_danger">Difficulty:</span></h6>
                                 <div class="pl-2"><canvas style="width:80px;height:20px" id="problem_id_10_chart"></canvas></div>
                             </div>
-                            <p> Can you find the password? Enter the password as flag in the following form: lakshya_CTF{passwordhere}
+                            <p>Simran Rajak, an investigative journalist in Jabalpur, was the key witness in a corruption scandal involving a high-ranking government official.
+                                After his disappearance, a partially corrupted file, <span class="bold text-info">last_known.mov</span> and a log file, <span class="bold text-info">meta_data.log</span> were recovered from his laptop. 
+                                Your task is to repair the corrupted video file using metadata hints from the log file. 
+                                Afterward, extract the hidden audio spectrogram in the final frame and decrypt the hidden message using XOR with the key derived from the log file
                             </p>
                             <a target="_blank" href="#!" class="btn btn-outline-secondary btn-shadow"><span class="fa fa-download mr-2"></span>Download</a>
                             <a href="#hint" data-toggle="modal" data-target="#hint" class="btn btn-outline-secondary btn-shadow"><span class="far fa-lightbulb mr-2"></span>Hint</a>
@@ -626,16 +684,30 @@
                     <span class="p-1" style="background-color:#f9751594">Steganography</span>
                     <span class="p-1" style="background-color:#36a2eb94">Pwning</span>
                     <span class="p-1" style="background-color:#9966FF94">Cryptography</span>
+                    <span class="p-1" style="background-color:#1a06f994">Networking</span>
                     <span class="p-1" style="background-color:#ffce5694">Other</span>
                 </div>
             </div>
 
         </div>
-        <div class="modal fade" id="hint" tabindex="-1" role="dialog" aria-labelledby="hint label" style="display: none;" aria-hidden="true">
+        <div class="modal fade" 
+            id="hint1" 
+            tabindex="-1" 
+            role="dialog" 
+            aria-labelledby="hint1Label" 
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
+                    <!-- Modal Header (Optional but recommended for accessibility) -->
+                    <div class="modal-header">
+                        <h5 id="hint1Label" class="modal-title">Challenge 1</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- Modal Body -->
                     <div class="modal-body">
-                        HINT GOES HERE
+                        YOU FOUND THE HINT
                     </div>
                 </div>
             </div>
@@ -643,25 +715,28 @@
     </div>
 
 
-        <footer class="bg-transparent text-center pt-4 ">
-            <div class="container">
-              <div class="row justify-content-center">
-              <div class=" col-auto text-center py-3">
-                <p class="text-danger">--------------------------------------------------</p>
-                  <a href="mailto:cyberhive@ggits.org" class="text-white mx-3"><i class="fas fa-envelope"></i>    </a>
-                  <a href="https://x.com/CyberHive_Club" class="text-white mx-3"><i class="fab fa-twitter"></i>    </a>
-                  <a href="https://www.linkedin.com/company/cyberhiveggits/" class="text-white mx-3"><i class="fab fa-linkedin"></i>    </a>
-                  <a href="https://www.instagram.com/cyberhiveggits" class="text-white mx-3"><i class="fab fa-instagram"></i>    </a>
-                  <a href="https://chat.whatsapp.com/BfueW2oJ7kt9dIrvrs149v" class="text-white mx-3"><i class="fab fa-whatsapp"></i>    </a><br></br>
-                  <p><i class="fas fa-map-marker-alt" ></i> <a href="https://ggits.org/" class="text-white">Gyan Ganga Institute of Technology & Science, Jabalpur</a></p></p>
-                <p class="text-danger mb-0">&copy; 2024 Crack-In 1.0 | CyberHive Club, GGITS. All rights reserved.</p>
-              </div>
-            </div>
-          </footer>
+    <footer class="bg-transparent text-center text-white pt-4">
+        <div class="container">
+          <div class="row justify-content-center">
+          <div class=" col-auto text-center py-3">
+            <p class="text-danger">--------------------------------------------------</p>
+              <a href="mailto:cyberhive@ggits.org" class="text-white mx-3"><i class="fas fa-envelope"></i>    </a>
+              <a href="https://x.com/CyberHive_Club" class="text-white mx-3"><i class="fab fa-twitter"></i>    </a>
+              <a href="https://www.linkedin.com/company/cyberhiveggits/" class="text-white mx-3"><i class="fab fa-linkedin"></i>    </a>
+              <a href="https://www.instagram.com/cyberhiveggits" class="text-white mx-3"><i class="fab fa-instagram"></i>    </a>
+              <a href="https://chat.whatsapp.com/BfueW2oJ7kt9dIrvrs149v" class="text-white mx-3"><i class="fab fa-whatsapp"></i>    </a>
+              <a href="https://discord.gg/DvNYyYtZD3" class="text-white mx-3"><i class="fab fa-discord"></i>    </a>
+              <br></br>
+              <p><i class="fas fa-map-marker-alt" ></i> <a href="https://ggits.org/" class="text-white">Gyan Ganga Institute of Technology & Science, Jabalpur</a></p></p>
+            <p class="text-danger mb-0">&copy; 2024 Crack-In 1.0 | CyberHive Club, GGITS. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="./js/challenge_countdown.js"></script>
 
 </body>
 
