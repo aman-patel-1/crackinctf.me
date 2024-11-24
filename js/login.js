@@ -1,27 +1,22 @@
-const login = async () => {
+const loginEndpoint = "https://crack-in-backend.azurewebsites.net/login";
+
+document.querySelector('button[type="submit"]').addEventListener('click', async (e) => {
+    e.preventDefault();
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    try {
-        const response = await fetch("https://crack-in-backend.azurewebsites.net/", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password }),
-        });
+    const response = await fetch(loginEndpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+    });
 
-        const data = await response.json();
-        if (response.status === 200) {
-            alert(data.message); // Login successful
-        } else {
-            alert(data.message); // Invalid credentials
-        }
-    } catch (error) {
-        console.error("Error connecting to backend:", error);
-        alert("Unable to connect to the server. Please try again later.");
+    const data = await response.json();
+    if (response.ok) {
+        alert("Login successful!");
+    } else {
+        alert(`Login failed: ${data.message}`);
     }
-};
-
-document.querySelector('button[type="submit"]').addEventListener('click', (e) => {
-    e.preventDefault();
-    login();
 });
