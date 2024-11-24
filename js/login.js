@@ -3,7 +3,7 @@ const login = async () => {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("https://crack-in-backend.azurewebsites.net/login", {
+        const response = await fetch("https://crack-in-backend.azurewebsites.net/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
