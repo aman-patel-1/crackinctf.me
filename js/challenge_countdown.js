@@ -1,7 +1,7 @@
 
 // Set the event's start and end date and time
 // Start time: 15th December 2024, 10:00:00
-var startDate = new Date("2024-12-15T10:00:00").getTime();
+var startDate = new Date("2024-12-20T10:00:00").getTime();
 //  var startDate = new Date().getTime() - 60000; // 1 minute ago for testing
 
 // End time: 15th December 2024, 16:00:00 (6 hours later)
